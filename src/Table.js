@@ -1,11 +1,13 @@
 import React from 'react'
 import * as ReactBootStrap from "react-bootstrap"
-import EmployeeData from "./EmployeeData"
+//import EmployeeData from "./EmployeeData"
 
 function Table(){
+    
     return (
         <div>
             <ReactBootStrap.Table responsive>
+              
   <thead>
     <tr>
       <th>#</th>
@@ -20,7 +22,7 @@ function Table(){
   <tbody>
     <tr>
       <td>1</td>
-      <td>Table cell</td>
+      <td></td>
       <td>Table cell</td>
       <td>Table cell</td>
       <td>Table cell</td>
