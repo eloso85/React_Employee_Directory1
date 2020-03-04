@@ -64,7 +64,7 @@ const employeeData =[
     },
 
     {
-        id:8,
+        id:9,
         name:"Nolan",
         position:"Department-Lead",
         department:"Shoes",
@@ -72,7 +72,7 @@ const employeeData =[
     },
 
     {
-        id:9,
+        id:10,
         name:"Analisa",
         position:"Part-Time",
         department:"Kids",
@@ -80,7 +80,7 @@ const employeeData =[
     },
 
     {
-        id:10,
+        id:11,
         name:"Janney",
         position:"Full-time",
         department:"Mens",
@@ -88,7 +88,7 @@ const employeeData =[
     },
 
     {
-        id:11,
+        id:12,
         name:"Deidra",
         position:"Full-time",
         department:"Womens",
@@ -96,7 +96,7 @@ const employeeData =[
     },
 
     {
-        id:12,
+        id:13,
         name:"Julia",
         position:"Manager",
         department:"Store",

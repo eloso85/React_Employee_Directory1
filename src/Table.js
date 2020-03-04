@@ -2,7 +2,7 @@ import React from 'react'
 import * as ReactBootStrap from "react-bootstrap"
 //import EmployeeData from "./EmployeeData"
 
-function Table(){
+function Table(props){
     
     return (
         <div>
@@ -10,24 +10,23 @@ function Table(){
               
   <thead>
     <tr>
-      <th>#</th>
+      <th>Picture</th>
       <th>Name</th>
       <th>Postion</th>
       <th>Department</th>
       <th>Salary</th>
-      <th></th>
-      <th></th>
+      
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>1</td>
+      
       <td></td>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
+      <td>{props.name}</td>
+      <td>{props.postion}</td>
+      <td>{props.department}</td>
+      <td>{props.salary}</td>
+     
     </tr>
    
   </tbody>
