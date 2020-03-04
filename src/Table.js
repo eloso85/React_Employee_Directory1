@@ -1,7 +1,8 @@
 import React from 'react'
 import * as ReactBootStrap from "react-bootstrap"
+import Api from "./Api"
 //import EmployeeData from "./EmployeeData"
-
+console.log(Api)
 function Table(props){
     
     return (
@@ -22,7 +23,7 @@ function Table(props){
     <tr>
       
       <td></td>
-      <td>{props.name}</td>
+      <td>{Api.name}</td>
       <td>{props.postion}</td>
       <td>{props.department}</td>
       <td>{props.salary}</td>
