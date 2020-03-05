@@ -1,18 +1,20 @@
-import React from 'react'
+import React, { Component } from 'react'
 //import * as ReactBootStrap from "react-bootstrap"
 import Api from "./Api"
 //import EmployeeData from "./EmployeeData"
+console.log(Api)
 
-function Table(){
-    
-    return (
-        <div>
-            <Api />
-            
-            
+class Table extends Component{
   
-        </div>
+  render(){
+   
+    return(
+      <div>
+        <Api />
+        
+      </div>
     )
+  }
 }
 
 export default Table
