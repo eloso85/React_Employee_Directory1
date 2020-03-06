@@ -29,23 +29,27 @@ class Api extends Component {
                 <ReactBootStrap.Table striped bordered hover>
   <thead>
     <tr>
-      <th>#</th>
+      
       <th>Picture</th>
-      <th>firstName</th>
-      <th>lastName</th>
-      <th>email</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Age</th>
+      <th>Email</th>
+      <th>Username</th>
       
     </tr>
   </thead>
  
 <tbody>
   {this.state.results.map( person => {
-  return <tr>
-      <td>1</td>   
-      <td><img src={person.picture.medium}/></td>
+  return <tr key = {person.login.uuid}>
+        
+      <td><img src={person.picture.thumbnail} alt=""/></td>
       <td>{person.name.first}</td>
       <td>{person.name.last}</td>
+      <td>{person.dob.age}</td>
       <td>{person.email}</td>
+      <td>{person.login.username}</td>
      </tr>
 
 })}
