@@ -6,27 +6,18 @@ class Api extends Component {
     
         
         state ={
-            image:'',
-            firstName:[],
-            lastName:'',
-            email:''
+           results:[]
+          
             
         }
     
     componentDidMount(){
        Axios.get('https://randomuser.me/api/?results=10') 
        .then((res)=>{
-            console.log(res)
-            const fname= res.data.results.map(employee => employee=<div>{employee.name.first}</div>)
-            const lname= res.data.results.map(employee => employee=<td>{employee.name.last}</td>)
-            const image= res.data.results.map(employee => employee=<td><img src={employee.picture.medium} alt=''/></td>)
-            const email= res.data.results.map(employee => employee=<div>{employee.email}</div>)
-            console.log(fname)
-            this.setState({firstName:fname})
-            this.setState({lastName:lname})
-            this.setState({image:image})
-            this.setState({email:email})
-            console.log(this.state.firstName)
+         console.log(res.data.results[0])
+          this.setState({
+            results: res.data.results
+          })
        })
        
     }
@@ -39,22 +30,26 @@ class Api extends Component {
   <thead>
     <tr>
       <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
-      <th>Last Name</th>
-      <th>Last Name</th>
+      <th>Picture</th>
+      <th>firstName</th>
+      <th>lastName</th>
+      <th>email</th>
+      
     </tr>
   </thead>
  
 <tbody>
-    <tr>
-      
-     
-     <td key={1}>{this.state.firstName}</td>
-     
-      </tr>
-</tbody>         
+  {this.state.results.map( person => {
+  return <tr>
+      <td>1</td>   
+      <td><img src={person.picture.medium}/></td>
+      <td>{person.name.first}</td>
+      <td>{person.name.last}</td>
+      <td>{person.email}</td>
+     </tr>
+
+})}
+  </tbody>         
      </ReactBootStrap.Table>            
                  
 
